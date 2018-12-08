@@ -1,0 +1,37 @@
+.orange {
+	background-color: #f55000;
+}
+
+.transparent {
+    background-color: rgba(255,255,255, 0.35);
+}
+
+.navbar-custom {
+	font-size: 25px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+/*	background-color: #cdaf95; /*peachpuff3 color*/
+}
+
+.navbar-custom .custom-item {
+	float: right;
+}
+
+.navbar-custom .custom-a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+
+.navbar-custom .custom-a:hover:not(.active) {;
+	background-color: #111;
+}
+
+.active {
+	background-color: #4caf50;
+}
+
