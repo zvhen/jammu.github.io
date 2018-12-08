@@ -1,11 +1,33 @@
-.orange {
-	background-color: #f55000;
+#welcome {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	z-index: 100;
+	text-shadow: 1px 1px 5px #000;
+}
+
+.b-color {
+	background-color: #1e1e1e;
 }
 
 .transparent {
-    background-color: rgba(255,255,255, 0.35);
+    /*background-color: rgba(255,255,255, 0.35);*/
+    background-color: rgba(0,0,0,0.35);
 }
 
+.transitions,
+.transitions * {
+	-webkit-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+}
+
+footer{
+	width:100%;
+	padding:20px;
+	overflow:hidden;
+}
+
+/*
 .navbar-custom {
 	font-size: 25px;
 	list-style-type: none;
@@ -15,23 +37,65 @@
 /*	background-color: #cdaf95; /*peachpuff3 color*/
 }
 
-.navbar-custom .custom-item {
+.custom-item {
 	float: right;
 }
 
-.navbar-custom .custom-a {
+/*Navigation Link for home - about section.
+Fade away boxes and text color changes*/
+
+/*.nav-link {
 	display: block;
+	font-size: 20px;
 	color: white;
 	text-align: center;
 	padding: 14px 20px;
 	text-decoration: none;
 }
+*/
 
-.navbar-custom .custom-a:hover:not(.active) {;
-	background-color: #111;
+
+.nav-link {
+/*	font-family: 'Catamaran', 'Lato', sans-serif;
+*/	font-size: 20px;
+	font-weight: 200;
+	margin: 0.5em;
+	padding: 5px;
+	width: 100%;
+	color: #fff;
+    /* MQ */
 }
 
-.active {
-	background-color: #4caf50;
+.nav-link:hover {
+	color: black !important;
+	background-color: #fff;
+}
+.nav-link:hover::before {
+	color: white;
 }
 
+.nav-link.nav-active:hover::after {
+	opacity: 0;
+}
+
+@media (min-width: 1200px) {
+	.nav-link {
+		font-size: 1.6rem;
+	}
+}
+
+.nav-active::after {
+	position: relative;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 1px;
+	content: '';
+	background: #fff;
+}
+
+.navbar-toggler-right {
+    /* Centrage toggler mobile*/
+	position: relative !important;
+	right: -1rem !important;
+}
